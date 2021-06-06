@@ -18,7 +18,7 @@ public class PostmanEchoTest {
                 .then()
                 .statusCode(200)
                 .contentType(ContentType.JSON)
-                .body("data", equalTo("wrong data"))
+                .body("someOtherObject", equalTo("wrong data"))
         ;
 
     }
@@ -33,7 +33,7 @@ public class PostmanEchoTest {
                 .then()
                 .statusCode(200)
                 .contentType(ContentType.JSON)
-                .body("data", equalTo("wrong data"))
+                .body("someOtherObject", equalTo("wrong data"))
         ;
 
     }
@@ -48,7 +48,7 @@ public class PostmanEchoTest {
                 .then()
                 .statusCode(200)
                 .contentType(ContentType.JSON)
-                .body("data", equalTo("wrong data"))
+                .body("someOtherObject", equalTo("wrong data"))
         ;
     }
 
