@@ -9,45 +9,47 @@ import static org.hamcrest.core.IsEqual.equalTo;
 
 public class PostmanEchoTest {
     @Test
-    void shouldPostToPostman(){
+    void shouldPostToPostman() {
         given()
                 .baseUri("https://postman-echo.com")
-                .body("some1 data")
+                .body("some data")
                 .when()
                 .post("/post")
                 .then()
                 .statusCode(200)
                 .contentType(ContentType.JSON)
-                .body("data", equalTo("some data"))
+                .body("data", equalTo("wrong data"))
         ;
 
     }
+
     @Test
-    void shouldReturnCurrency(){
+    void shouldReturnCurrency() {
         given()
                 .baseUri("https://postman-echo.com")
-                .body("mytext1:1")
+                .body("mytext:1")
                 .when()
                 .post("/post")
                 .then()
                 .statusCode(200)
                 .contentType(ContentType.JSON)
-                .body("data", equalTo("mytext:1"))
+                .body("data", equalTo("wrong data"))
         ;
 
     }
+
     @Test
-    void shouldReturnId(){
+    void shouldReturnId() {
         given()
                 .baseUri("https://postman-echo.com")
-                .body("request1:3")
+                .body("request:3")
                 .when()
                 .post("/post")
                 .then()
                 .statusCode(200)
                 .contentType(ContentType.JSON)
-                .body("data", equalTo("request:3"))
-                ;
+                .body("data", equalTo("wrong data"))
+        ;
     }
 
 }
