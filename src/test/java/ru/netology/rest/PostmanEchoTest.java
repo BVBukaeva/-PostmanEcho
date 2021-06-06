@@ -12,7 +12,7 @@ public class PostmanEchoTest {
     void shouldPostToPostman(){
         given()
                 .baseUri("https://postman-echo.com")
-                .body("some data")
+                .body("some1 data")
                 .when()
                 .post("/post")
                 .then()
@@ -26,7 +26,7 @@ public class PostmanEchoTest {
     void shouldReturnCurrency(){
         given()
                 .baseUri("https://postman-echo.com")
-                .body("mytext:1")
+                .body("mytext1:1")
                 .when()
                 .post("/post")
                 .then()
@@ -40,7 +40,7 @@ public class PostmanEchoTest {
     void shouldReturnId(){
         given()
                 .baseUri("https://postman-echo.com")
-                .body("request:3")
+                .body("request1:3")
                 .when()
                 .post("/post")
                 .then()
