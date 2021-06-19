@@ -4,12 +4,11 @@
   "required": [
     "data"
   ],
-  "additionalProperties": false,
+  "additionalProperties": true,
   "properties": {
     "data": {
       "type": "string",
       "minLength": 1
     }
   }
-}
 }
