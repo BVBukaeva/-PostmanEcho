@@ -18,38 +18,8 @@ public class PostmanEchoTest {
                 .then()
                 .statusCode(200)
                 .contentType(ContentType.JSON)
-                .body("someOtherObject", equalTo("wrong data"))
+                .body("data", equalTo("some data"))
         ;
 
     }
-
-    @Test
-    void shouldReturnCurrency() {
-        given()
-                .baseUri("https://postman-echo.com")
-                .body("mytext:1")
-                .when()
-                .post("/post")
-                .then()
-                .statusCode(200)
-                .contentType(ContentType.JSON)
-                .body("someOtherObject", equalTo("wrong data"))
-        ;
-
-    }
-
-    @Test
-    void shouldReturnId() {
-        given()
-                .baseUri("https://postman-echo.com")
-                .body("request:3")
-                .when()
-                .post("/post")
-                .then()
-                .statusCode(200)
-                .contentType(ContentType.JSON)
-                .body("someOtherObject", equalTo("wrong data"))
-        ;
-    }
-
 }
